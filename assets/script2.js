@@ -1,16 +1,24 @@
 
 var score = 0;
-var timerEl = document.getElementById('timer');
-var startBtn = document.getElementById('start');
+var timerEl = document.querySelector(".time");
+var startBtn = document.getElementById("start");
 
 var timeLeft = 60;
 
-startBtn.addEventListener("click", function(){
-    
-    var timeInterval = setInterval(function () {
+    function setTime() {
+     var timeInterval = setInterval(function () {
         timeLeft--;
+        timerEl.textcontent = timeLeft;
+            if (timeLeft === 0 ){
+             clearInterval(timeInterval);
+             endQuiz();
+            }
         }, 1000);
-})
+    };
+
+    
+startBtn.addEventListener("click", startQuiz)
+
 
 function generateQuiz () {
     function showQuestions (questions, quizContainer){
@@ -80,3 +88,11 @@ var quizQuestion = [
            timeLeft = timeLeft - 15; 
         }
     }
+
+function endQuiz () {
+    timerEl.textContent = " ";
+    var initialsEl = document.createElement("")
+}
+
+setTime();
+generateQuiz();

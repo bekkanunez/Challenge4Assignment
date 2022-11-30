@@ -4,24 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <title>Quizzies</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Javascript Quiz</title>
   </head>
 
 <body>
-    <div>
-        <button id="start">Start Quizzie</button> 
-        <h2 id="timer"></h2>
-    </div>    
-    
-    <div id="quiz"></div>
-        <button id="submit">Get Results</button>
-    <div id="results"></div> 
+  <header> 
+        <a class="text-left" href="#">View Highscores</a>
+        <h2>Timer <span class="time">60</span></h2>
+  </header>
 
+  <main>
+      <h2>Press button to begin quiz</h2>
+      <p>At the end of the quiz, enter your initials to save your score. Good luck!</p>
+        <button type="button" id="start">Start Quiz</button>
+  </main>  
 
+  <div class="correct">
+    <h2>Correct!!!</h2>
+    <hr>
+  </div>
 
+  <div class="incorrect">
+    <h2>Inorrect!!!</h2>
+    <hr>
+  </div>
 
-<script src="./assets/script.js"></script>
+<script src="./assets/js/questions.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
-
-
